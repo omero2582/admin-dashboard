@@ -59,8 +59,7 @@ body{
 .header .top-bar .search-container input[type='search']{
     border-radius: 7px;
     border-width: 0px;
-    background-color: var(--gray);
-    
+    background-color: var(--gray);  
 }
 
 .header .top-bar .profile-container{
@@ -86,7 +85,7 @@ body{
     grid-template-columns: min-content min-content;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding: 15px 30px 5px;
 }
 
 .header .main-bar .greeting{
@@ -100,7 +99,7 @@ body{
 .header .main-bar .greeting img{
     width: 60px;
     grid-row: 1/3;
-    margin: 15px 10px 5px 10px;
+    margin: 0px 10px 5px 10px;
     border-radius: 50%;
 }
 .header .main-bar h1{
@@ -109,7 +108,7 @@ body{
 }
 
 .header .main-bar p{
-    margin: 10px 0 2px 0;
+    margin: 0 0 2px 0;
     align-self: flex-end;
 }
 
@@ -117,7 +116,9 @@ body{
     display: grid;
     grid-template-columns: repeat(3, min-content);
     grid-template-rows: min-content;
-    gap: 10px;
+    gap: 15px;
+    position: relative;
+    bottom: 4px;
 }
 
 .header .main-bar .action-buttons button{
@@ -138,7 +139,6 @@ body{
     display: grid;
     font-weight: 500;
     font-size: 0.8rem;
-    height: 100vh;
     grid-template-rows: repeat(3,min-content);
     gap: 20px;
 }
@@ -185,4 +185,103 @@ body{
 
 .content{
     background-color: var(--gray);
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: repeat(4, auto);
+}
+
+.content h1{
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 20px 30px;
+}
+
+.content .my-projects{
+    grid-row: 2/-1;
+    padding: 0px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.content .project{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    column-gap: 10px;
+    height: 200px;
+    padding-left: 0px;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content .project .bottom-buttons {
+    grid-column: 2/3;
+
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: flex-end;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    gap: 12px;
+}
+
+.content .project button{
+    width: 24px;
+    height: 24px;
+    border: 0;
+    background-color: transparent;
+}
+
+button.favorite{
+    background-image: url(icons/star-plus-outline.svg);
+}
+button.watch{
+    background-image: url(icons/eye-plus-outline.svg);
+}
+button.share{
+    background-image: url(icons/share-variant-outline.svg);
+}
+.content .project .status-bar{
+    width: 7px;
+    background-color: var(--yellow);
+    grid-row: 1/4;
+}
+
+
+.content .project h2{
+    margin: 20px 0 0;
+    font-size: 1.4rem;
+}
+
+.content .project p{
+
+}
+
+
+.content .announcements, .trending{
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.content .announcements div + div{
+    border-top: 2px solid black;
+    padding-top: 10px;
+}
+
+.content .announcements h2, .trending h2{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.content .announcements p, .trending p{
+    font-size: 0.9rem;
+    margin: 10px;
+    margin-top: 5px;
+}
+
+.trending h2{
+    font-weight: 500;
 }
