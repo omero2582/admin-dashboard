@@ -2,9 +2,6 @@ function addProject(){
     let outer = document.createElement('div');
     outer.classList.add('project');
 
-    let statusBar = document.createElement('div');
-    statusBar.classList.add('status-bar');
-
     let title = document.createElement('h2');
     title.textContent = 'Title';
 
@@ -29,7 +26,7 @@ function addProject(){
     //
 
     
-    outer.appendChild(statusBar);
+    
     outer.appendChild(title);
     outer.appendChild(description);
     outer.appendChild(bottomRow)
